@@ -23,6 +23,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Test", "5-Test", "{895755
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMotors.Test", "5-Test\WebMotors.Test\WebMotors.Test.csproj", "{6AD93E0C-5F5C-45BF-B614-92FCA03503F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6-Imgs", "6-Imgs", "{964C9D08-B5A5-4797-9BBE-656305308D18}"
+	ProjectSection(SolutionItems) = preProject
+		..\0-imgs WebMotors\1.PNG = ..\0-imgs WebMotors\1.PNG
+		..\0-imgs WebMotors\2.PNG = ..\0-imgs WebMotors\2.PNG
+		..\0-imgs WebMotors\3.PNG = ..\0-imgs WebMotors\3.PNG
+		..\0-imgs WebMotors\4.PNG = ..\0-imgs WebMotors\4.PNG
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
