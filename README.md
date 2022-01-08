@@ -10,6 +10,6 @@ WebApi, CQRS, C#, TDD, SWAGGER, EF
 
 #necessario setar a API, como projeto principal e rodar a aplicação
 
-
+#caso tenha interesse o caminho para o repositório, para poder ver o histórico de commits (https://github.com/marcusfcbarbosa/webMotors)
 
 #Espero poder causar uma boa impressão  =)
