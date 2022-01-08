@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using WebMotors.Domain.WebMotorsContext.Adapters;
 using WebMotors.Domain.WebMotorsContext.Commands.Output;
 using WebMotors.Domain.WebMotorsContext.Entities;
 using WebMotors.Domain.WebMotorsContext.Queries;
@@ -31,7 +32,7 @@ namespace WebMotors.Domain.WebMotorsContext.QueryHandlers
 
         public async Task<IQueryResult> Handle(BuscaTodosAnunciosQuery request, CancellationToken cancellationToken)
         {
-            return await Task.FromResult(new QueryResult(true, "", await _anuncioWebMotorsRepository.GetAll()));
+            return await Task.FromResult(new QueryResult(true, "", AnuncioAdapater.EntityToModel(await _anuncioWebMotorsRepository.GetAll())));
         }
     }
 }
