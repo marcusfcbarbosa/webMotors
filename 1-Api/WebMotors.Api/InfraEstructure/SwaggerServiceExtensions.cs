@@ -57,7 +57,7 @@ namespace WebMotors.Api.InfraEstructure
             {
                 c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Versioned API v1.0");
 
-                c.DocumentTitle = "Title Documentation";
+                c.DocumentTitle = "WebMotors Documentation";
                 c.DocExpansion(DocExpansion.None);
             });
             return app;
