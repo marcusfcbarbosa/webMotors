@@ -11,7 +11,7 @@ namespace WebMotors.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnuncioController : ControllerBase
+    public class AnuncioController : BaseController
     {
 
         [HttpPost]
