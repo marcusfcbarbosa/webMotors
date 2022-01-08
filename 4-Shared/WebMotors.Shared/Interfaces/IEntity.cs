@@ -2,7 +2,7 @@
 
 namespace WebMotors.Shared.Interfaces
 {
-    interface IEntity
+   public interface IEntity
     {
         int Id { get; set; }
         DateTime CreatedAt { get; set; }

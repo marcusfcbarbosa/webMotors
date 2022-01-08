@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="WebMotorsContext\Adapters\" />
     <Folder Include="WebMotorsContext\Commands\" />
-    <Folder Include="WebMotorsContext\Entities\" />
     <Folder Include="WebMotorsContext\Handlers\" />
     <Folder Include="WebMotorsContext\ValueObjects\" />
     <Folder Include="WebMotorsContext\Repositories\" />
