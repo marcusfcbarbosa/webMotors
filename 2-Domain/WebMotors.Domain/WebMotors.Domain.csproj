@@ -9,7 +9,6 @@
     <Folder Include="WebMotorsContext\Commands\" />
     <Folder Include="WebMotorsContext\Handlers\" />
     <Folder Include="WebMotorsContext\ValueObjects\" />
-    <Folder Include="WebMotorsContext\Repositories\" />
     <Folder Include="WebMotorsContext\Queries\" />
   </ItemGroup>
 
