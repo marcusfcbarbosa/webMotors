@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="WebMotorsContext\ValueObjects\" />
+    <Compile Remove="WebMotorsContext\ValueObjects\**" />
+    <EmbeddedResource Remove="WebMotorsContext\ValueObjects\**" />
+    <None Remove="WebMotorsContext\ValueObjects\**" />
   </ItemGroup>
 
 	<ItemGroup>
