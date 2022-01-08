@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebMotors.Shared.Interfaces;
 
 namespace WebMotors.Domain.WebMotorsContext.Repositories.Interfaces
@@ -15,5 +16,9 @@ namespace WebMotors.Domain.WebMotorsContext.Repositories.Interfaces
         IEnumerable<TEntity> Filter();
         IEnumerable<TEntity> Filter(Func<TEntity, bool> predicate);
         void SaveChanges();
+
+        Task CreateAsync(TEntity entity);
+
+        Task SaveChangesAsync();
     }
 }

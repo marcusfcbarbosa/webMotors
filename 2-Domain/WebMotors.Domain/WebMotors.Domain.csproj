@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="WebMotorsContext\Adapters\" />
-    <Folder Include="WebMotorsContext\Handlers\" />
     <Folder Include="WebMotorsContext\ValueObjects\" />
     <Folder Include="WebMotorsContext\Queries\" />
   </ItemGroup>

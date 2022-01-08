@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WebMotors.Domain.WebMotorsContext.Repositories.Interfaces;
 using WebMotors.Infra.SqlContext;
 using WebMotors.Shared.Interfaces;
@@ -74,5 +75,15 @@ namespace WebMotors.Infra.Repositories
             return _context.Set<TEntity>().Where(predicate);
         }
         public void SaveChanges() => _context.SaveChanges();
+
+        public async Task CreateAsync(TEntity entity)
+        {
+            await _context.Set<TEntity>().AddAsync(entity);
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
     }
 }
