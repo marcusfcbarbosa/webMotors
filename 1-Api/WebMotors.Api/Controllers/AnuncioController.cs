@@ -14,7 +14,7 @@ namespace WebMotors.Api.Controllers
 
         [HttpPost]
         [Route("")]
-        public async Task<ICommandResult> Create([FromServices] IMediator mediator,
+        public async Task<ICommandResult> Post([FromServices] IMediator mediator,
                                                  [FromBody] CriaAnuncioCommand command)
         {
             command.Validate();
@@ -23,5 +23,16 @@ namespace WebMotors.Api.Controllers
             return new CommandResult(false, "Erros", command.Notifications);
         }
 
+
+        [HttpPut]
+        [Route("")]
+        public async Task<ICommandResult> Put([FromServices] IMediator mediator,
+                                                 [FromBody] AtualizaAnuncioCommand command)
+        {
+            command.Validate();
+            if (command.Valid)
+                return await mediator.Send(command);
+            return new CommandResult(false, "Erros", command.Notifications);
+        }
     }
 }
