@@ -9,7 +9,7 @@ namespace WebMotors.Domain.WebMotorsContext.Entities
         public string Versao { get; private set; }
         public int Ano { get; private set; }
         public string Quilometragem { get; private set; }
-        public string Observao { get; private set; }
+        public string Observacao { get; private set; }
         private AnuncioWebMotors() { }
         public AnuncioWebMotors(string marca, string modelo, string versao, int ano, string quilometragem, string observao) : this()
         {
@@ -18,7 +18,7 @@ namespace WebMotors.Domain.WebMotorsContext.Entities
             Versao = versao;
             Ano = ano;
             Quilometragem = quilometragem;
-            Observao = observao;
+            Observacao = observao;
         }
 
 
