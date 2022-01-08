@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,6 +31,7 @@ namespace WebMotors.Api
         {
 
             services.AddControllers();
+            services.AddDbContext<WebMotorsContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             registrandoDependencias(services);
             DocumentacaoApi(services);
             var key = Encoding.ASCII.GetBytes(Settings.Secret);

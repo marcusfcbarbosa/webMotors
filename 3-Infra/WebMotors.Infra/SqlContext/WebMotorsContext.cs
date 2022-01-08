@@ -38,8 +38,7 @@ namespace WebMotors.Infra.SqlContext
         {
             modelBuilder.Entity<AnuncioWebMotors>(entity =>
             {
-                entity.ToTable("AnuncioWebMotors").HasKey(e => e.Id);
-                entity.Property(e => e.CreatedAt).HasColumnName("CreatedAt");
+                entity.ToTable("tb_AnuncioWebmotors").HasKey(e => e.Id);
 
                 entity.Property(e => e.Marca)
                     .HasMaxLength(45)

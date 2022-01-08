@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using WebMotors.Domain.WebMotorsContext.Adapters;
@@ -21,6 +22,7 @@ namespace WebMotors.Domain.WebMotorsContext.Handlers
         {
             var entity = AnuncioAdapater.CommandToEntity(request);
             await _anuncioWebMotorsRepository.CreateAsync(entity);
+            await _anuncioWebMotorsRepository.SaveChangesAsync();
             return await Task.FromResult(new CommandResult(true, "Anuncio cadastrado com sucesso!", entity));
         }
     }
