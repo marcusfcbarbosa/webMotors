@@ -1,4 +1,7 @@
-﻿using WebMotors.Domain.WebMotorsContext.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using WebMotors.Domain.WebMotorsContext.Entities;
 using WebMotors.Domain.WebMotorsContext.Repositories.Interfaces;
 using WebMotors.Infra.SqlContext;
 
@@ -11,6 +14,11 @@ namespace WebMotors.Infra.Repositories
             : base(context)
         {
             _context = context;
+        }
+
+        public async Task<IEnumerable<AnuncioWebMotors>> GetAll()
+        {
+            return await _context.AnuncioWebMotors.AsQueryable().ToListAsync();
         }
     }
 }

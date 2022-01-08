@@ -21,10 +21,10 @@ namespace WebMotors.Infra.SqlContext
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Data Source=TDAChallenge.DB");//alterar esse nome depois
+                options.UseSqlServer("Data Source=DESKTOP-DLQJRAC\\INSTANCIA_LOCAL;Initial Catalog=teste_webmotors;Integrated Security=True");
             }
         }
-        public DbSet<AnuncioWebMotors> Medicos { get; set; }
+        public DbSet<AnuncioWebMotors> AnuncioWebMotors { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(WebMotorsContext).Assembly);

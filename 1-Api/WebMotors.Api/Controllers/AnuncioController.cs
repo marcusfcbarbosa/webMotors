@@ -40,13 +40,20 @@ namespace WebMotors.Api.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<IQueryResult> Get([FromServices] IMediator mediator,int id)
+        public async Task<IQueryResult> Get([FromServices] IMediator mediator, int id)
         {
             var query = new BuscaAnuncioQuery { id = id };
             query.Validate();
             if (query.Valid)
                 return await mediator.Send(query);
             return new QueryResult(false, "Erros", query.Notifications);
+        }
+
+        [HttpGet]
+        [Route("")]
+        public async Task<IQueryResult> GetAll([FromServices] IMediator mediator, [FromQuery] BuscaTodosAnunciosQuery query)
+        {
+            return await mediator.Send(query);
         }
 
     }

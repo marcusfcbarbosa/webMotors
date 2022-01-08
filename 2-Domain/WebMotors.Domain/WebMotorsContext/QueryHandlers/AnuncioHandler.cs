@@ -9,7 +9,10 @@ using WebMotors.Shared.Queries;
 
 namespace WebMotors.Domain.WebMotorsContext.QueryHandlers
 {
-    public class AnuncioHandler : IRequestHandler<BuscaAnuncioQuery, IQueryResult>
+    public class AnuncioHandler : 
+        IRequestHandler<BuscaAnuncioQuery, IQueryResult>,
+        IRequestHandler<BuscaTodosAnunciosQuery, IQueryResult>
+        
     {
         private readonly IAnuncioWebMotorsRepository _anuncioWebMotorsRepository;
         public AnuncioHandler(IAnuncioWebMotorsRepository anuncioWebMotorsRepository)
@@ -24,6 +27,11 @@ namespace WebMotors.Domain.WebMotorsContext.QueryHandlers
                 return await Task.FromResult(new QueryResult(false, "Anuncio não encontrado", entity));
             }
             return await Task.FromResult(new QueryResult(true, "", entity));
+        }
+
+        public async Task<IQueryResult> Handle(BuscaTodosAnunciosQuery request, CancellationToken cancellationToken)
+        {
+            return await Task.FromResult(new QueryResult(true, "", await _anuncioWebMotorsRepository.GetAll()));
         }
     }
 }
