@@ -75,6 +75,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "WebMotors.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/WebMotors.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebMotors.Shared.dll": {}
+        }
       }
     }
   },
@@ -185,11 +195,17 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "WebMotors.Shared/1.0.0": {
+      "type": "project",
+      "path": "../../4-Shared/WebMotors.Shared/WebMotors.Shared.csproj",
+      "msbuildProject": "../../4-Shared/WebMotors.Shared/WebMotors.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "WebMotors.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -222,7 +238,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Marcus\\Documents\\0-WebMotors Desafio\\4-Shared\\WebMotors.Shared\\WebMotors.Shared.csproj": {
+              "projectPath": "C:\\Users\\Marcus\\Documents\\0-WebMotors Desafio\\4-Shared\\WebMotors.Shared\\WebMotors.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

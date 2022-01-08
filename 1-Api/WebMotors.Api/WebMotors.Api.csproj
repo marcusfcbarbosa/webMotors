@@ -8,4 +8,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\4-Shared\WebMotors.Shared\WebMotors.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

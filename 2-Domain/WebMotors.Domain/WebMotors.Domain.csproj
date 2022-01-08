@@ -1,7 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="WebMotorsContext\Adapters\" />
+    <Folder Include="WebMotorsContext\Commands\" />
+    <Folder Include="WebMotorsContext\Entities\" />
+    <Folder Include="WebMotorsContext\Handlers\" />
+    <Folder Include="WebMotorsContext\ValueObjects\" />
+    <Folder Include="WebMotorsContext\Repositories\" />
+    <Folder Include="WebMotorsContext\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\4-Shared\WebMotors.Shared\WebMotors.Shared.csproj" />
+  </ItemGroup>
 
 </Project>
