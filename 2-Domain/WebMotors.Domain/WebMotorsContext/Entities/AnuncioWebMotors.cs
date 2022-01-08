@@ -8,10 +8,10 @@ namespace WebMotors.Domain.WebMotorsContext.Entities
         public string Modelo { get; private set; }
         public string Versao { get; private set; }
         public int Ano { get; private set; }
-        public string Quilometragem { get; private set; }
+        public int Quilometragem { get; private set; }
         public string Observacao { get; private set; }
         private AnuncioWebMotors() { }
-        public AnuncioWebMotors(string marca, string modelo, string versao, int ano, string quilometragem, string observao) : this()
+        public AnuncioWebMotors(string marca, string modelo, string versao, int ano, int quilometragem, string observao) : this()
         {
             Marca = marca;
             Modelo = modelo;

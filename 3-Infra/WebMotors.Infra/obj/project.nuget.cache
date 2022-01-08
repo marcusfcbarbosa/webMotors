@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u6iEQwiWKa/04GpP8P/UbaJZNyO6MTT5iBrnX5jcjaavW1184g02izw/j/lDRU9elpIit9+fqoKiq3xSVfv/pA==",
+  "dgSpecHash": "4whu5nMMIsYANWjuNpyfW7nTfpyDyXSrC4Rl6Mbx3aUq9lIuFkhCaDUDTByEqHprczs3oMUwKyN5W9TYHj+GVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Marcus\\Documents\\0-WebMotors Desafio\\3-Infra\\WebMotors.Infra\\WebMotors.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcus\\.nuget\\packages\\fluentvalidator\\2.0.4\\fluentvalidator.2.0.4.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

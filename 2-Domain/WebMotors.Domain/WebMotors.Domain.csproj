@@ -6,11 +6,15 @@
 
   <ItemGroup>
     <Folder Include="WebMotorsContext\Adapters\" />
-    <Folder Include="WebMotorsContext\Commands\" />
     <Folder Include="WebMotorsContext\Handlers\" />
     <Folder Include="WebMotorsContext\ValueObjects\" />
     <Folder Include="WebMotorsContext\Queries\" />
   </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidator" Version="2.0.4" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+	</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\4-Shared\WebMotors.Shared\WebMotors.Shared.csproj" />
