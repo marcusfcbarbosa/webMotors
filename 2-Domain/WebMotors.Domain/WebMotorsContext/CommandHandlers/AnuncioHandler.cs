@@ -39,7 +39,6 @@ namespace WebMotors.Domain.WebMotorsContext.Handlers
             entity.Atualiza(request.Marca, request.Modelo, request.Versao, request.Ano, request.Quilometragem, request.Observacao);
             await _anuncioWebMotorsRepository.SaveChangesAsync();
             return await Task.FromResult(new CommandResult(true, "Anuncio Atualizado com sucesso!", entity));
-
         }
     }
 }

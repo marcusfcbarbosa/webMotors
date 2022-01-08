@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using WebMotors.Domain.WebMotorsContext.Commands.Input;
 using WebMotors.Domain.WebMotorsContext.Commands.Output;
+using WebMotors.Domain.WebMotorsContext.Queries;
 using WebMotors.Shared.Commands;
+using WebMotors.Shared.Queries;
 
 namespace WebMotors.Api.Controllers
 {
@@ -34,5 +36,18 @@ namespace WebMotors.Api.Controllers
                 return await mediator.Send(command);
             return new CommandResult(false, "Erros", command.Notifications);
         }
+
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IQueryResult> Get([FromServices] IMediator mediator,int id)
+        {
+            var query = new BuscaAnuncioQuery { id = id };
+            query.Validate();
+            if (query.Valid)
+                return await mediator.Send(query);
+            return new QueryResult(false, "Erros", query.Notifications);
+        }
+
     }
 }
