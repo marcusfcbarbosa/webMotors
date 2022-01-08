@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\2-Domain\WebMotors.Domain\WebMotors.Domain.csproj" />
+    <ProjectReference Include="..\..\3-Infra\WebMotors.Infra\WebMotors.Infra.csproj" />
     <ProjectReference Include="..\..\4-Shared\WebMotors.Shared\WebMotors.Shared.csproj" />
   </ItemGroup>
 

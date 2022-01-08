@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using WebMotors.Domain.WebMotorsContext.Commands.Input;
+using WebMotors.Domain.WebMotorsContext.Commands.Output;
+using WebMotors.Shared.Commands;
 
 namespace WebMotors.Api.Controllers
 {
@@ -12,7 +12,16 @@ namespace WebMotors.Api.Controllers
     public class AnuncioController : ControllerBase
     {
 
-
+        [HttpPost]
+        [Route("")]
+        public async Task<ICommandResult> Create([FromServices] IMediator mediator,
+                                                 [FromBody] CriaAnuncioCommand command)
+        {
+            command.Validate();
+            if (command.Valid)
+                return await mediator.Send(command);
+            return new CommandResult(false, "Erros", command.Notifications);
+        }
 
     }
 }

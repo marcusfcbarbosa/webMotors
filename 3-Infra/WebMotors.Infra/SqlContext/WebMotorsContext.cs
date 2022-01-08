@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FluentValidator;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.IO;
@@ -27,8 +28,8 @@ namespace WebMotors.Infra.SqlContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(WebMotorsContext).Assembly);
-            //modelBuilder.Ignore<Notifiable>();
-            //modelBuilder.Ignore<Notification>();
+            modelBuilder.Ignore<Notifiable>();
+            modelBuilder.Ignore<Notification>();
 
             EntityMapping(modelBuilder);
             base.OnModelCreating(modelBuilder);

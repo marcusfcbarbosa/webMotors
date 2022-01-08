@@ -21,7 +21,7 @@ namespace WebMotors.Domain.WebMotorsContext.Handlers
         {
             var entity = AnuncioAdapater.CommandToEntity(request);
             await _anuncioWebMotorsRepository.CreateAsync(entity);
-            return await Task.FromResult(new CommandResult(true, "Anuncio cadastrado com sucesso!", request));
+            return await Task.FromResult(new CommandResult(true, "Anuncio cadastrado com sucesso!", entity));
         }
     }
 }
