@@ -13,3 +13,9 @@ WebApi, CQRS, C#, TDD, SWAGGER, EF
 #caso tenha interesse o caminho para o repositório, para poder ver o histórico de commits (https://github.com/marcusfcbarbosa/webMotors)
 
 #Espero poder causar uma boa impressão  =)
+
+
+
+
+
+# 09/10/2021, sim....eu esqueci da rota de DELETE e acabei de subir essa implementação, na esperança de vocês terem visto o caminho da url, e olhado que agora no repositorio o CRUD está completo
