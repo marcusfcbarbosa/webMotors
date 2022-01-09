@@ -32,7 +32,7 @@ namespace WebMotors.Domain.WebMotorsContext.QueryHandlers
 
         public async Task<IQueryResult> Handle(BuscaTodosAnunciosQuery request, CancellationToken cancellationToken)
         {
-            return await Task.FromResult(new QueryResult(true, "", AnuncioAdapater.EntityToModel(await _anuncioWebMotorsRepository.GetAll())));
+            return await Task.FromResult(new QueryResult(true, "", AnuncioAdapater.EntitysToModels(await _anuncioWebMotorsRepository.GetAll())));
         }
     }
 }

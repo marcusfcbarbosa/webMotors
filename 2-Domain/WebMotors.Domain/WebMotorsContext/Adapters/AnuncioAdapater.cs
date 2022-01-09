@@ -16,7 +16,21 @@ namespace WebMotors.Domain.WebMotorsContext.Adapters
             return new AnuncioWebMotors(command.Marca, command.Modelo, command.Versao, command.Ano, command.Quilometragem, command.Observacao);
         }
 
-        public static IEnumerable<AnuncioWebMotorsModel> EntityToModel(IEnumerable<AnuncioWebMotors> entities)
+        public static AnuncioWebMotorsModel EntityToModel(AnuncioWebMotors entitie)
+        {
+            return new AnuncioWebMotorsModel
+            {
+                Id = entitie.Id,
+                Marca = entitie.Marca,
+                Modelo = entitie.Modelo,
+                Versao = entitie.Versao,
+                Ano = entitie.Ano,
+                Quilometragem = entitie.Quilometragem,
+                Observacao = entitie.Observacao,
+            };
+        }
+
+        public static IEnumerable<AnuncioWebMotorsModel> EntitysToModels(IEnumerable<AnuncioWebMotors> entities)
         {
             List<AnuncioWebMotorsModel> list = new List<AnuncioWebMotorsModel>();
             for (int i = 0; i < entities.Count(); i++)

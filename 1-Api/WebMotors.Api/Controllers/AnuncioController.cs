@@ -56,5 +56,15 @@ namespace WebMotors.Api.Controllers
             return await mediator.Send(query);
         }
 
+
+
+        [HttpDelete]
+        public async Task<ICommandResult> Delete([FromServices] IMediator mediator, DeletaAnuncioCommand command)
+        {
+            command.Validate();
+            if (command.Valid)
+                return await mediator.Send(command);
+            return new CommandResult(false, "Erros", command.Notifications);
+        }
     }
 }
