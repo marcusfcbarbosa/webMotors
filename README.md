@@ -18,4 +18,3 @@ WebApi, CQRS, C#, TDD, SWAGGER, EF
 
 
 
-# 09/10/2021, sim....eu esqueci da rota de DELETE e acabei de subir essa implementação, na esperança de vocês terem visto o caminho da url, e olhado que agora no repositorio o CRUD está completo
