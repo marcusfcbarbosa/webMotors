@@ -1,27 +1,27 @@
 ﻿using FluentValidator;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
-using System.IO;
 using WebMotors.Domain.WebMotorsContext.Entities;
 
 namespace WebMotors.Infra.SqlContext
 {
     public class WebMotorsContext : DbContext
     {
+        private readonly IConfiguration _config;
         public WebMotorsContext()
         {
             this.ChangeTracker.LazyLoadingEnabled = false;
         }
-        public WebMotorsContext(DbContextOptions<WebMotorsContext> options)
+        public WebMotorsContext(DbContextOptions<WebMotorsContext> options, IConfiguration config)
             : base(options)
         {
+            _config = config;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Data Source=DESKTOP-DLQJRAC\\INSTANCIA_LOCAL;Initial Catalog=teste_webmotors;Integrated Security=True");
+                options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
             }
         }
         public DbSet<AnuncioWebMotors> AnuncioWebMotors { get; set; }
